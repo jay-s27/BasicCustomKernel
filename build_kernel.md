@@ -92,6 +92,19 @@ uname -a
 ```
 -----
 
+## *Reverting to old kernel*
+If the custom kernel causes issues one can revert back to the old Kernel that WSL was running on.   
+
+> In the C drive of your system, a `.wslconfig` file was created a few steps before. Move this file into another drive (like :D)   
+```linux
+mv /mnt/c/Users/<your username>/.wslconfig /mnt/d
+```
+
+This command moves the `.wslconfig` file into you :D drive.   
+Since WSL can't find the config file it goes back the old configuration.   
+
+----------------
+
 ## SOURCES:
 https://falco.org/blog/falco-wsl2-custom-kernel/     
 https://unix.stackexchange.com/questions/594470/wsl-2-does-not-have-lib-modules
